@@ -11,7 +11,7 @@ class SolutionExercise00(object):
     def function_f(x: np.ndarray):
         return np.sin(x) * np.cos(x)
 
-    def plottting(self, interval, save_dir=None):
+    def plotting(self, interval, save_dir=None):
         assert isinstance(interval, tuple)
         fig = plt.figure()
         ax = fig.add_subplot()
@@ -41,12 +41,12 @@ class SolutionExercise00(object):
         ax1 = fig.add_subplot(2, 1, 1)
         ax2 = fig.add_subplot(2, 1, 2)
 
-        ax1.hist(normal_x, 50, density=True)
+        ax1.hist(normal_x, 100, density=True)
         ax1.set_xlabel('x')
         ax1.set_ylabel('y')
         ax1.set_title('Normal distribution of mean 5 std 2')
 
-        ax2.hist(uniform_x, 50, density=True)
+        ax2.hist(uniform_x, 100, density=True)
         ax2.set_xlabel('x')
         ax2.set_ylabel('y')
         ax2.set_title('Uniform distribution from 0 to 10')
@@ -61,5 +61,5 @@ class SolutionExercise00(object):
 
 if __name__ == "__main__":
     sol = SolutionExercise00()
-    sol.plottting((-2*math.pi, 2*math.pi), 'function_plot.png')
+    sol.plotting((-2*math.pi, 2*math.pi), 'function_plot.png')
     sol.random_generate(seed=49, save_dir='random_plot.png')
