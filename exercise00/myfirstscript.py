@@ -62,4 +62,4 @@ class SolutionExercise00(object):
 if __name__ == "__main__":
     sol = SolutionExercise00()
     sol.plottting((-2*math.pi, 2*math.pi), 'function_plot.png')
-    sol.random_generate(seed=49)
+    sol.random_generate(seed=49, save_dir='random_plot.png')
